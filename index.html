@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christian Lukowski - Bewerbung als Fachinformatiker für Anwendungsentwicklung. Infos zu Projekten, Fähigkeiten und Kontakt.">
+    <meta name="keywords" content="Christian Lukowski, Bewerbung, Fachinformatiker, Anwendungsentwicklung, Projekte, Kontakt">
+    <meta name="author" content="Christian Lukowski">
     <title>Christian Lukowski - Bewerbung</title>
     <link rel="stylesheet" href="style.css">
     <script src="js/animations.js"></script>
@@ -49,8 +52,18 @@
 
     <section id="contact">
         <h2>Kontakt</h2>
-        <p>Email: christian.lukowski96@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/christianlukowski">Mein GitHub</a></p>
+    <form id="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Senden</button>
+    </form>
     </section>
 
     <footer>
