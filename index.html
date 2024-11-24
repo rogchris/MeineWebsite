@@ -8,11 +8,17 @@
     <meta name="author" content="Christian Lukowski">
     <title>Christian Lukowski - Bewerbung</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="js/animations.js"></script>
     <script src="js/projects.js"></script>
 </head>
 <body>
+    <div id="loader">
+        <span></span><span></span><span></span>
+    </div>
+    
     <header>
+        <button id="dark-mode-toggle" style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem;">🌙 Dark Mode</button>
         <nav>
             <ul>
                 <li><a href="#about">Über mich</a></li>
@@ -23,25 +29,36 @@
         </nav>
     </header>
 
-    <section id="hero">
+    <section id="hero" class="fade-in">
         <h1>Christian Lukowski</h1>
         <p>Angehender Fachinformatiker für Anwendungsentwicklung</p>
     </section>
+    
+    <a href="#contact" class="cta-button">Jetzt kontaktieren</a>
 
-    <section id="about">
+
+    <section id="about" class="fade-in">
         <h2>Über mich</h2>
         <p>Ich bin Umschüler im Bereich IT mit Fokus auf Anwendungsentwicklung. Zielstrebig und lernbereit, suche ich ein Praktikum, um meine Kenntnisse in der Praxis anzuwenden.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projekte</h2>
-        <ul>
-            <li><a href="https://github.com/christianlukowski/project1">Projekt 1</a> - Beschreibung des Projekts.</li>
-            <li><a href="https://github.com/christianlukowski/project2">Projekt 2</a> - Beschreibung des Projekts.</li>
-        </ul>
+        <div class="project-cards">
+            <div class="card">
+                <h3>Projekt 1</h3>
+                <p>Beschreibung des Projekts.</p>
+                <a href="https://github.com/christianlukowski/project1" target="_blank">Mehr erfahren</a>
+            </div>
+            <div class="card">
+                <h3>Projekt 2</h3>
+                <p>Beschreibung des Projekts.</p>
+                <a href="https://github.com/christianlukowski/project2" target="_blank">Mehr erfahren</a>
+            </div>
+        </div>        
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Fähigkeiten</h2>
         <ul>
             <li>HTML, CSS, JavaScript</li>
@@ -50,7 +67,7 @@
         </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Kontakt</h2>
     <form id="contact-form" action="https://formsubmit.co/your-email@example.com" method="POST">
         <label for="name">Name:</label>
@@ -63,11 +80,20 @@
         <textarea id="message" name="message" rows="4" required></textarea>
 
         <button type="submit">Senden</button>
+        <div id="toast" class="hidden">Nachricht gesendet!</div>
     </form>
     </section>
 
     <footer>
         <p>&copy; 2024 Christian Lukowski</p>
     </footer>
+
+    <script>
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none";
+        });
+    </script>
+    
 </body>
 </html>

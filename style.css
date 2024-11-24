@@ -1,1 +1,320 @@
-#hero,footer,header{text-align:center;padding:1rem}button,header{background:#3498db;color:#fff}#hero,button,footer,header{color:#fff}body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background:linear-gradient(to bottom,#fff,#f4f4f4);font-size:16px}header{position:sticky;top:0;z-index:1000;box-shadow:0 4px 6px rgba(0,0,0,.1)}header ul{list-style:none;padding:0}header ul li a{color:#fff;text-decoration:none}#hero{background:linear-gradient(to right,#3498db,#2ecc71)}section{padding:2rem;opacity:0;transform:translateY(30px);transition:.6s ease-in-out}footer{background:#333}.fade-in{opacity:0;transform:translateY(20px);animation:1s ease-in-out forwards fadeIn}@keyframes fadeIn{to{opacity:1;transform:translateY(0)}}a:hover{color:#e74c3c}section.visible{opacity:1;transform:translateY(0)}header ul li{display:block;margin:10px 0}@media (min-width:768px){header ul li{display:inline;margin:0 15px}#hero{padding:2rem 0}}@media (min-width:1024px){body{font-size:18px}#hero{padding:3rem 0}}a,button{transition:transform .3s,box-shadow .3s}a:hover,button:hover{transform:scale(1.05);box-shadow:0 4px 8px rgba(0,0,0,.2)}form{display:flex;flex-direction:column;gap:1rem}button,input,textarea{font-size:1rem;padding:.5rem;border:1px solid #ccc;border-radius:4px}button{cursor:pointer}button:hover{background:#2ecc71}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0d6efd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background: linear-gradient(135deg, #0d6efd, #198754);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 5px solid #198754;
+}
+
+section {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+/* Animation für das Hereinschweben von Elementen */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover-Effekte für Links */
+a:hover {
+    color: #e74c3c;
+}
+
+/* Leichte Animation beim Scrollen */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #3498db;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Standard für kleinere Bildschirme */
+body {
+    font-size: 16px;
+}
+
+header ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Für Tablets (ab 768px) */
+@media (max-width: 768px) 
+    {#hero h1 {
+        font-size: 2rem;
+    }
+    }
+
+/* Für große Bildschirme (ab 1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    #hero {
+        padding: 3rem 0;
+    }
+}
+
+button, a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 1rem;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #084298;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background: #2ecc71;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #198754;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card a:hover {
+    background: #0c633b;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+#toast.hidden {
+    display: none;
+}
+
+#toast.visible {
+    display: block;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode #hero {
+    background: linear-gradient(135deg, #212121, #424242);
+}
+
+body.dark-mode .card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+#loader span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background: #0d6efd;
+    border-radius: 50%;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-20px);
+    }
+}
