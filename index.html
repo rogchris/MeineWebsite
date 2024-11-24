@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <div id="loader">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="parallax"></div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Christian Lukowski - Bewerbung als Fachinformatiker für Anwendungsentwicklung. Infos zu Projekten, Fähigkeiten und Kontakt.">
@@ -11,12 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="js/animations.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/dark-mode.js"></script>
 </head>
 <body>
-    <div id="loader">
-        <span></span><span></span><span></span>
-    </div>
-    
     <header>
         <button id="dark-mode-toggle" style="background: none; border: none; color: white; cursor: pointer; font-size: 1rem;">🌙 Dark Mode</button>
         <nav>
@@ -29,10 +30,15 @@
         </nav>
     </header>
 
-    <section id="hero" class="fade-in">
-        <h1>Christian Lukowski</h1>
-        <p>Angehender Fachinformatiker für Anwendungsentwicklung</p>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Christian Lukowski</h1>
+            <p>Fachinformatiker für Anwendungsentwicklung</p>
+            <a href="#contact" class="cta-button">Kontakt aufnehmen</a>
+        </div>
     </section>
+        
+    
     
     <a href="#contact" class="cta-button">Jetzt kontaktieren</a>
 
@@ -42,21 +48,22 @@
         <p>Ich bin Umschüler im Bereich IT mit Fokus auf Anwendungsentwicklung. Zielstrebig und lernbereit, suche ich ein Praktikum, um meine Kenntnisse in der Praxis anzuwenden.</p>
     </section>
 
-    <section id="projects" class="fade-in">
-        <h2>Projekte</h2>
-        <div class="project-cards">
+    <section id="projects">
+        <h2>Meine Projekte</h2>
+        <div class="project-grid">
             <div class="card">
                 <h3>Projekt 1</h3>
-                <p>Beschreibung des Projekts.</p>
-                <a href="https://github.com/christianlukowski/project1" target="_blank">Mehr erfahren</a>
+                <p>Ein interessantes Projekt, das ich während meiner Umschulung erstellt habe.</p>
+                <a href="https://github.com/projekt1" class="card-link">Mehr erfahren</a>
             </div>
             <div class="card">
                 <h3>Projekt 2</h3>
-                <p>Beschreibung des Projekts.</p>
-                <a href="https://github.com/christianlukowski/project2" target="_blank">Mehr erfahren</a>
+                <p>Ein weiteres spannendes Projekt, das ich umgesetzt habe.</p>
+                <a href="https://github.com/projekt2" class="card-link">Mehr erfahren</a>
             </div>
-        </div>        
-    </section>
+        </div>
+    </section>    
+    
 
     <section id="skills" class="fade-in">
         <h2>Fähigkeiten</h2>
@@ -86,7 +93,11 @@
 
     <footer>
         <p>&copy; 2024 Christian Lukowski</p>
-    </footer>
+        <div class="social-icons">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </footer>    
 
     <script>
     window.addEventListener("load", () => {
